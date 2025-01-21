@@ -87,7 +87,7 @@ const Newsletter = () => {
         >
           {["Get in touch", "Let’s Talk", "CR Number", "Location"].map(
             (title, index) => (
-              <Grid item xs={12} sm={6} md={2} key={index} gap={2}>
+              <Grid item xs={6} sm={6} md={2} key={index} gap={2}>
                 <Box
                   sx={{
                     display: "flex",
@@ -95,7 +95,7 @@ const Newsletter = () => {
                     alignItems: "center",
                     textAlign: "center",
                     gap: "0.5rem",
-                   justifyContent:'center'
+                   justifyContent:'start'
                   }}
                 >
                   <Box
