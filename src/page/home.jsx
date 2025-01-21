@@ -4,20 +4,11 @@ import {
   Box,
   Button,
   Grid,
-  Card,
   useTheme,
 } from "@mui/material";
 import VerifiedIcon from "@mui/icons-material/Verified";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import BusinessIcon from "@mui/icons-material/Business";
-import ArticleIcon from "@mui/icons-material/Article";
-import GavelIcon from "@mui/icons-material/Gavel";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Navbar from "../shared/navbar/navbar";
 import Banner from "../shared/banner/banner";
-import ScheduledConsultationCard from "../components/consoltion-card";
 import Footer from "../shared/footer/footer";
 import Newsletter from "../shared/newsletter/newsletter";
 import ChooseSection from "../shared/choose-section/choose-section";
@@ -43,7 +34,7 @@ function Home() {
       <LegalService />
 
       {/* Specialized Lawyers Section */}
-     <LawyersSection />
+       <LawyersSection />
 
       {/* Join as a Lawyer Section */}
       <Box
