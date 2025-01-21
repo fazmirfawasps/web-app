@@ -22,7 +22,13 @@ export default function SwiperComponent() {
   return (
     <>
       <Swiper
-        slidesPerView={"4"}
+        slidesPerView={"1"}
+        breakpoints={{
+          640: { slidesPerView: 1 }, // Small screens (mobile)
+          768: { slidesPerView: 2 }, // Tablets
+          1024: { slidesPerView: 3 }, // Small desktops
+          1280: { slidesPerView: 4 }, // Large screens
+        }}
         spaceBetween={30}
         watchSlidesProgress={true}
         pagination={{
