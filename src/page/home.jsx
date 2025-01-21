@@ -16,6 +16,7 @@ import LegalSection from "../shared/legal-section/legal-section";
 import Faq from "../shared/faq/faq";
 import LegalService from "../shared/legal-services/legal-service";
 import LawyersSection from "../shared/lawyer-section/lawyers-section";
+import MobileBanner from "../shared/mobile-banner/mobile-banner";
 
 
 function Home() {
@@ -137,7 +138,8 @@ function Home() {
       <Faq />
 
       {/* why Choose */}
-      <ChooseSection />
+      {/* <ChooseSection /> */}
+      <MobileBanner />
       {/* // Newsletter Section */}
       <Newsletter />
 
