@@ -30,8 +30,7 @@ function Home() {
       <Banner />
 
       {/* Legal Services Section */}
-
-      <LegalService />
+        <LegalService />
 
       {/* Specialized Lawyers Section */}
       <LawyersSection />

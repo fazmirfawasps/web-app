@@ -5,7 +5,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Faq = () => {
     return (
-      <Box sx={{ padding: "3rem 1rem", backgroundColor: "#fff" }}>
+      <Box
+        sx={{
+          padding: "3rem 1rem",
+          backgroundColor: "#fff",
+          paddingX: { sm: 0, md: 16 },
+        }}
+      >
         <Typography
           variant="h6"
           sx={{
@@ -73,7 +79,7 @@ const Faq = () => {
                   >
                     {question}
                   </Typography>
-                <KeyboardArrowDownIcon sx={{ color: "#bca864" }} />
+                  <KeyboardArrowDownIcon sx={{ color: "#bca864" }} />
                 </Box>
               </Grid>
             ))}

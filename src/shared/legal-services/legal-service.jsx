@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Card, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, Grid, Icon, Typography, useTheme } from '@mui/material';
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import GavelIcon from "@mui/icons-material/Gavel";
@@ -7,17 +7,24 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BusinessIcon from "@mui/icons-material/Business";
 import ArticleIcon from "@mui/icons-material/Article";
+import CustomBadge from '../../components/custom-badge';
 
 
 const LegalService = () => {
+  const theme = useTheme()
     return (
-      <Box sx={{ padding: "3rem 1rem", backgroundColor: "white" }}>
+      <Box
+        sx={{
+          padding: "3rem 1rem",
+          backgroundColor: "white",
+          paddingX: { sm: 0, md: 16 },
+        }}
+      >
         <Typography
           variant="h6"
           sx={{
             color: "#bca864",
             textAlign: "left",
-            marginLeft: "3rem",
             marginBottom: "0.5rem",
           }}
         >
@@ -27,7 +34,7 @@ const LegalService = () => {
           variant="h4"
           fontWeight="bold"
           sx={{
-            textAlign: "center",
+            textAlign: "start",
             marginBottom: "2rem",
             color: "#001f54",
           }}
@@ -46,6 +53,9 @@ const LegalService = () => {
               buttonText: "Book a consultation",
               buttonColor: "#001f54",
               buttonTextColor: "#fff",
+              Icon: CalendarTodayIcon,
+              iconColor: "#1fa67a",
+              iconBgColor: theme.palette.green.light,
             },
             {
               icon: <PhoneInTalkIcon sx={{ fontSize: 40, color: "#ff6d6d" }} />,
@@ -55,6 +65,9 @@ const LegalService = () => {
               buttonText: "Consult Now",
               buttonColor: "#001f54",
               buttonTextColor: "#fff",
+              Icon: PhoneInTalkIcon,
+              iconColor: "#ff6d6d",
+              iconBgColor: theme.palette.red[100],
             },
             {
               icon: <BusinessIcon sx={{ fontSize: 40, color: "#1fa67a" }} />,
@@ -64,6 +77,9 @@ const LegalService = () => {
               buttonText: "Soon",
               buttonColor: "#f5f5f5",
               buttonTextColor: "#a0a0a0",
+              Icon: BusinessIcon,
+              iconColor: "#1fa67a",
+              iconBgColor: theme.palette.green.light,
             },
             {
               icon: <ArticleIcon sx={{ fontSize: 40, color: "#1fa67a" }} />,
@@ -73,6 +89,9 @@ const LegalService = () => {
               buttonText: "Soon",
               buttonColor: "#f5f5f5",
               buttonTextColor: "#a0a0a0",
+              Icon: ArticleIcon,
+              iconColor: "#1fa67a",
+              iconBgColor: theme.palette.green.light,
             },
             {
               icon: <GavelIcon sx={{ fontSize: 40, color: "#1fa67a" }} />,
@@ -82,6 +101,9 @@ const LegalService = () => {
               buttonText: "Soon",
               buttonColor: "#f5f5f5",
               buttonTextColor: "#a0a0a0",
+              Icon: GavelIcon,
+              iconColor: "#1fa67a",
+              iconBgColor: theme.palette.green.light,
             },
             {
               icon: <PersonAddIcon sx={{ fontSize: 40, color: "#1fa67a" }} />,
@@ -91,6 +113,9 @@ const LegalService = () => {
               buttonText: "Soon",
               buttonColor: "#f5f5f5",
               buttonTextColor: "#a0a0a0",
+              Icon: PersonAddIcon,
+              iconColor: "#1fa67a",
+              iconBgColor: theme.palette.green.light,
             },
           ].map((service, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
@@ -103,7 +128,18 @@ const LegalService = () => {
                   borderRadius: "8px",
                 }}
               >
-                <Box sx={{ marginBottom: "1rem" }}>{service.icon}</Box>
+                <Box
+                  sx={{ marginBottom: "1rem" }}
+                  alignItems={"center"}
+                  justifyItems={"center"}
+                >
+                  <CustomBadge
+                    Icon={service.Icon}
+                    size={50}
+                    iconColor={service.iconColor}
+                    bgColor={service.iconBgColor}
+                  />
+                </Box>
                 <Typography
                   variant="h6"
                   fontWeight="bold"
@@ -125,6 +161,9 @@ const LegalService = () => {
                     color: service.buttonTextColor,
                     textTransform: "none",
                     fontWeight: "bold",
+                    width: "100%",
+                    borderRadius: "8px",
+                    padding: "0.5rem 1rem",
                   }}
                   disabled={service.buttonText === "Soon"}
                 >

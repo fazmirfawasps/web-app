@@ -8,7 +8,7 @@ const Services = () => {
     
   return (
     <div>
-      <Box sx={{ padding: "3rem 2rem", textAlign: "center" ,}}>
+      <Box sx={{ padding: "3rem 2rem", textAlign: "center" , paddingX:{sm:0,md:16}}} >
         <Grid container spacing={4}>
           {[
             {

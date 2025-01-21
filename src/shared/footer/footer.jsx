@@ -5,7 +5,13 @@ import Logo from '../../components/logo';
 const Footer = () => {
     return (
       <div>
-        <Box sx={{ backgroundColor: "#f9f9f9", padding: "3rem 1rem" }}>
+        <Box
+          sx={{
+            backgroundColor: "#f9f9f9",
+            padding: "3rem 1rem",
+            paddingX: { sm: 0, md: 16 },
+          }}
+        >
           <Grid container spacing={3} justifyContent="center">
             <Grid item xs={12} sm={6} md={3}>
               {/* Logo and Description */}
@@ -144,8 +150,8 @@ const Footer = () => {
             {/* Payment Methods */}
             <Box sx={{ display: "flex", gap: "1rem" }}>
               {[
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Google_Pay_Logo_%282020%29.svg/2560px-Google_Pay_Logo_%282020%29.svg.png", // GPay
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Apple_Pay_logo.svg/2560px-Apple_Pay_logo.svg.png", // Apple Pay
+                "https://w7.pngwing.com/pngs/1016/761/png-transparent-gpay-logo.png",
+                "https://e7.pngegg.com/pngimages/676/292/png-clipart-apple-pay-google-pay-mobile-payment-apple-text-logo.png",
                 "https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png", // Visa
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/2560px-Mastercard_2019_logo.svg.png", // Mastercard
               ].map((logo, index) => (
@@ -154,7 +160,8 @@ const Footer = () => {
                   component="img"
                   src={logo}
                   alt="Payment Icon"
-                  sx={{ width: "40px", height: "24px", objectFit: "contain" }}
+
+                  sx={{ width: "40px", height: "24px", objectFit: "contain" ,}}
                 />
               ))}
             </Box>

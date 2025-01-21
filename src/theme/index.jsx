@@ -13,6 +13,17 @@ const theme = createTheme({
       main: "#00C853",
       light: "rgba(0, 200, 83, 0.1)",
     },
+    red: {
+     100:red[100],
+     200:red[200],
+     300:red[300],
+     400:red[400],
+     500:red[500],
+     600:red[600],
+     700:red[700],
+     800:red[800],
+     900:red[900],
+    },
     secondary: {
       main: "#E3D7B6",
       light: "#fcfbf8",

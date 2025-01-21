@@ -8,6 +8,7 @@ const ChooseSection = () => {
           backgroundColor: "#001f54",
           color: "white",
           padding: "3rem 1rem",
+          paddingX: { sm: 0, md: 16 },
         }}
       >
         <Typography

@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const LegalSection = () => {
     return (
-      <Box sx={{ padding: "3rem 1rem", backgroundColor: "#f9f9f9" }}>
+      <Box sx={{ padding: "3rem 1rem", backgroundColor: "#f9f9f9" ,paddingX:{sm:0,md:16}}}>
         <Typography
           variant="h6"
           sx={{
