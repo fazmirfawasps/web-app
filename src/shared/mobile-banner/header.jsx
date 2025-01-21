@@ -7,7 +7,6 @@ const BannerHeader = () => {
   return (
     <Grid
       container
-      spacing={4}
       alignItems="center"
       justifyContent="space-between"
       sx={{
@@ -36,7 +35,9 @@ const BannerHeader = () => {
         item
         xs={12}
         md={6}
-        sx={{ display: "flex", justifyContent: "center", gap: 2 }}
+        px={2}
+        sx={{ display: "flex", justifyContent: 'space-between' }}
+
       >
         <Button
           variant="contained"
@@ -47,6 +48,7 @@ const BannerHeader = () => {
             fontWeight: "bold",
             borderRadius: "10px",
             padding: "15px",
+            
           }}
           href="#"
         >
