@@ -1,25 +1,26 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import {  Typography, Button, Grid } from "@mui/material";
 import GooglePlayIcon from "@mui/icons-material/Android";
 import AppleIcon from "@mui/icons-material/Apple";
 
-const AppUI = () => {
+const BannerHeader = () => {
   return (
-    <Box
+    <Grid
+      container
+      spacing={4}
+      alignItems="center"
+      justifyContent="space-between"
       sx={{
         color: "#FFFFFF",
         textAlign: "center",
         position: "relative",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        width: "100%",
       }}
     >
-      {/* Header */}
-      <Box>
+      {/* Header Section */}
+      <Grid item xs={12} md={6}>
         <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 2 }}>
-          Why choose ?
+          Why Choose ?
         </Typography>
 
         {/* Subheading */}
@@ -28,10 +29,15 @@ const AppUI = () => {
           in Qatar, as we provide innovative legal services to meet your needs
           in a flexible and reliable manner.
         </Typography>
-      </Box>
+      </Grid>
 
-      {/* Buttons */}
-      <Box sx={{ display: "flex", gap: 2 }}>
+      {/* Buttons Section */}
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ display: "flex", justifyContent: "center", gap: 2 }}
+      >
         <Button
           variant="contained"
           color="primary"
@@ -43,7 +49,6 @@ const AppUI = () => {
             padding: "15px",
           }}
           href="#"
-          p={10}
         >
           Google Play
         </Button>
@@ -61,9 +66,9 @@ const AppUI = () => {
         >
           App Store
         </Button>
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
   );
 };
 
-export default AppUI;
+export default BannerHeader;
