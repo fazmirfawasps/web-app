@@ -30,17 +30,17 @@ function Home() {
       <Banner />
 
       {/* Legal Services Section */}
-      
+
       <LegalService />
 
       {/* Specialized Lawyers Section */}
-       <LawyersSection />
+      <LawyersSection />
 
       {/* Join as a Lawyer Section */}
       <Box
         sx={{
           padding: "3rem 1rem",
-          backgroundColor: "#001f54",
+          backgroundColor: "#112444",
           color: "white",
           display: "flex",
           justifyContent: "space-between",
@@ -55,23 +55,16 @@ function Home() {
             sx={{
               width: "100%",
               height: "300px",
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
-              borderRadius: "8px",
+              borderRadius: "40px",
               position: "relative",
               overflow: "hidden",
+              backgroundImage: "url('/grap.png')", // Corrected here
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           >
             {/* Add your actual image or replace this with an image tag */}
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: "100px",
-                background: "linear-gradient(to right, #1fa67a, #4caf50)",
-              }}
-            />
           </Box>
         </Box>
         <Box sx={{ flex: 2, minWidth: "300px" }}>
@@ -139,11 +132,10 @@ function Home() {
       </Box>
 
       {/* Legal Blog Section */}
-    <LegalSection />
+      <LegalSection />
 
       {/* FAQ Section */}
       <Faq />
-      
 
       {/* why Choose */}
       <ChooseSection />
@@ -152,7 +144,6 @@ function Home() {
 
       {/* Footer Section */}
       <Footer />
-      
     </>
   );
 }
