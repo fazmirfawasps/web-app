@@ -18,12 +18,12 @@ const BannerHeader = () => {
     >
       {/* Header Section */}
       <Grid item xs={12} md={6}>
-        <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 2 }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", marginBottom: 2,textAlign:'start' }}>
           Why Choose ?
         </Typography>
 
         {/* Subheading */}
-        <Typography variant="body1" sx={{ maxWidth: "600px", marginBottom: 4 }}>
+        <Typography variant="body1" sx={{ maxWidth: "600px", marginBottom: 4,textAlign:"start" }}>
           Naseh application is the ideal solution for your legal consultations
           in Qatar, as we provide innovative legal services to meet your needs
           in a flexible and reliable manner.
@@ -36,8 +36,11 @@ const BannerHeader = () => {
         xs={12}
         md={6}
         px={2}
-        sx={{ display: "flex", justifyContent: 'space-between' }}
-
+        sx={{
+          display: "flex",
+          justifyContent: { sm: "space-between", md: "flex-end" },
+          gap: 2,
+        }}
       >
         <Button
           variant="contained"
@@ -48,7 +51,6 @@ const BannerHeader = () => {
             fontWeight: "bold",
             borderRadius: "10px",
             padding: "15px",
-            
           }}
           href="#"
         >
